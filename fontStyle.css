@@ -1,6 +1,6 @@
 h2{
     text-align: left;
-    color: aqua;
+    color: #373737;
     text-decoration: none;
     text-transform: uppercase;
     font-style: normal;
@@ -10,7 +10,4 @@ img{
     width: 40%;
     float: left;
     padding-right: 10px;
-}
-body{
-    background-color:blue;
 }
