@@ -4,11 +4,6 @@
 body{
     background-color:beige;
 }
-@media screen and (max width:700px){
-    .content, .side_bar, img{
-        width:100%
-    }
-}
 .banner{
     background-color:dimgrey;
     padding: 20px;
@@ -57,6 +52,6 @@ body{
     padding: 0.1px;
     text-align: center;
     color: rgb(233, 233, 233);
-    margin-block-start: 730px;
+    margin-block-start: 530px;
 
 }
