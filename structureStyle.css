@@ -1,8 +1,10 @@
-*{
-    box-sizing: border-box;
-}
+
 body{
     background-color:beige;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
 }
 .header{
     background-color:dimgrey;
@@ -34,6 +36,15 @@ body{
     display: block;
     clear: both;
 }
+.footer{
+    background-color: dimgrey;
+    padding: 1.8px;
+    text-align: center;
+    color: rgb(233, 233, 233);
+    margin-block-start: 530px;
+
+}
+
 .content{
     
     float: left;
@@ -42,16 +53,13 @@ body{
 }
 .side_bar{
     
-    float: right;
+    float: left;
     width:30%;
     padding: 15px;
 }
 
-.footer{
-    background-color: dimgrey;
-    padding: 0.1px;
-    text-align: center;
-    color: rgb(233, 233, 233);
-    margin-block-start: 450px;
-
+@media screen and (max-width: 700px)  {
+    .content, .side_bar, img{
+        width: 100%;
+    }
 }
