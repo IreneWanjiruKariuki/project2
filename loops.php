@@ -26,3 +26,33 @@ for($f=45;$f<55;$f++){
 ?>
 
 <h4>foreach</h4>
+<?php
+$months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+//foreach($months AS $month){
+    //print $month . "<br>";
+//}
+?>
+
+<form action="">
+    <select name="" id="">
+        <option value="">--Months--</option>
+        <?php
+        foreach($months AS $month){
+            print "<option value=''>$month</option>";
+        }
+        ?>
+    </select>
+    <select name="" id="">
+        <option value="">--Year--</option>
+        <?php
+        //while loop
+        $y = 2014;
+        while($y < 2030){
+            print "option value-''>$y</option>";
+            
+        }
+        
+        ?>
+        
+    </select>
+</form>
