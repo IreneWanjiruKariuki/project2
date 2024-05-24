@@ -40,6 +40,16 @@ $user_details =[
             "Mobile"=>"=2546478388",
         ]
     ),
+    "Manager"=> array(
+        "fullname"=>"Peter Okama",
+        "address"=>"Mada",
+        "email"=>"POkoma@yahoo.com",
+        "phone"=>[
+            "Home"=>"+254484584890",
+            "Work"=>"+254845673929",
+            "Mobile"=>"+2546448869",
+        ]
+    ),
     "Secretary"=> array(
         "fullname"=>"David Okama",
         "address"=>"Mada",
@@ -47,11 +57,11 @@ $user_details =[
         "phone"=>[
             "Home"=>"+254484588399",
             "Work"=>"+254845637839",
-            "Mobile"=>"=2546473890",
+            "Mobile"=>"+2546473890",
         ]
     ),
 ];
-
+print $user_details["Secretary"] ["phone"] ["Work"];
 ?>
 <pre>
     <?php print_r($user_details) ?>
