@@ -1,4 +1,4 @@
-<body background="image/pexels-hngstrm-1939485.jpg" style="background-color:beige; ">
+
     <div class="container">
         <!-- nav starts here -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary" >
@@ -13,22 +13,22 @@
                             <a class="nav-link active" aria-current="page" href="./">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index2.html">About</a>
+                            <a class="nav-link active" aria-current="page" href="index2.php">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index4.html">Structure</a>
+                            <a class="nav-link active" aria-current="page" href="index4.php">Structure</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index5.html">Partnerships</a>
+                            <a class="nav-link active" aria-current="page" href="index5.php">Partnerships</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index6.html">Products and services</a>
+                            <a class="nav-link active" aria-current="page" href="index6.php">Products and services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="r.html">Sign in</a>
+                            <a class="nav-link active" aria-current="page" href="r.php">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="r2.html">Sign up</a>
+                            <a class="nav-link active" aria-current="page" href="r2.php">Sign up</a>
                         </li>
                         
                     </ul>

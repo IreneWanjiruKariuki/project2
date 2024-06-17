@@ -7,48 +7,9 @@
     <link rel="stylesheet" href="css.css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body background="image/pexels-hngstrm-1939485.jpg">
-
-    <div class="container">
-        <!-- nav starts here -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">PEKAR</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index2.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index4.html">Structure</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index5.html">Partnerships</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index6.html">Products and services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="r.html">Sign in</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="r2.html">Sign up</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="header">
-        <h1>PEKAR INDUSTRIAL LTD</h1> 
-    </div>
+<body background="image/pexels-hngstrm-1939485.jpg" style="background-color:beige; ">
+<?php include_once ("templates/nav.php"); ?>
+<?php include_once ("templates/header.php"); ?>
 
     <div class="row:after">
 
@@ -106,11 +67,7 @@
             </table>
         </div>
 
-        <div class="side_bar">
-            <h3>Our Mission</h3>
-            <p>At Peace Construction Company, our mission is simple yet profound: to create spaces that inspire, endure, and enrich lives. We are committed to delivering high-quality construction projects that exceed expectations, while fostering a culture of safety, innovation, and collaboration</p>
-            
-        </div>
+        <?php include_once ("templates/sidebar.php"); ?>
     </div>
     <div class="footer" style="margin-block-start: 550px;">
         copywrite CONSTRUCTION CO 2024 &copy; All rights reserved
