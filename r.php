@@ -23,7 +23,8 @@
 VALUES ('$fn', '$un', '$pwd')";
 
 if ($conn->query($insert_message) === TRUE) {
-  echo "New record created successfully";
+  header("Location: contacts.php");
+  exit();
 } else {
   echo "Error: " . $insert_message . "<br>" . $conn->error;
 }

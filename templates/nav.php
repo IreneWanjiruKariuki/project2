@@ -25,11 +25,15 @@
                             <a class="nav-link active" aria-current="page" href="index6.php">Products and services</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="view_messages.php">View Messages</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="r.php">Sign in</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="r2.php">Sign up</a>
                         </li>
+                        
                         
                     </ul>
                 </div>
