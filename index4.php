@@ -9,16 +9,18 @@
 </head>
 <body background="image/pexels-hngstrm-1939485.jpg" style="background-color:beige; ">
     <?php 
+    require_once ("includes/db_connect.php"); 
     include_once ("templates/nav.php");
     include_once ("templates/header.php");
-    if(isset($_POST["save_details"])){
+    if(isset($_POST["send_message"])){
 
         $fn= $_POST["fullname"];
-        $un= $_POST["username"];
-        $pwd= $_POST["password"];
+        $em= $_POST["email"];
+        $sl= $_POST["Subject_Line"];
+        $msg= $_POST["message"];
     
-        $insert_message = "INSERT INTO messages (sender_name, sender_username, sender_password)
-        VALUES ('$fn', '$un', '$pwd')";
+        $insert_message = "INSERT INTO messages (sender_name, sender_email,subject_line, text_message)
+        VALUES ('$fn', '$em', '$sl','$msg')";
     
         if ($conn->query($insert_message) === TRUE) {
             header("Location: contacts.php");
@@ -54,12 +56,21 @@
                 <input type="email" id="em"
                 placeholder="Email" name="email" required><br><br>
 
+                <label for="sl">Subject:</label> <br>
+                <select name="Subject_Line" id="sl">
+                <option value="subject line">--Select Subject--</option>
+                    <option value="repairs">Repairs</option>
+                    <option value="foundation">Foundation</option>
+                    <option value="wiring">Wiring</option>
+                    <option value="painting">Painting</option>
+                </select> <br> <br>
+
                 <label for="msg">Message:</label><br>
                 <textarea id="msg" 
                 placeholder="Enter your message here" name="message" rows="4" cols="50">
                 </textarea><br><br>
 
-                <input type="button" name="send_message" value="Send Message">
+                <input type="submit" name="send_message" value="Send Message">
             </form>
         </div>
         <?php include_once ("templates/sidebar.php"); ?>

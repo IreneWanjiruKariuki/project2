@@ -20,10 +20,10 @@
             <table>
                 <thead>
                 <tr>
-                    <th>Number</th>
-                    <th>sender_name</th>
-                    <th>sender_username</th>
-                    <th>time</th>
+                    <th colspan="2">Sender name</th>
+                    <th>Sender Email</th>
+                    <th>Subject line</th>
+                    <th>Time</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -43,7 +43,8 @@
                <tr>
                 <td><?php print $en; ?>.</td>
                 <td><?php print $sel_msg_row["sender_name"]; ?></td>
-                <td><?php print $sel_msg_row["sender_username"]; ?></td>
+                <td><?php print $sel_msg_row["sender_email"]; ?></td>
+                <td><?php print $sel_msg_row["subject_line"]; ?></td>
                 <td><?php print date("d-M-Y H:i", strtotime( $sel_msg_row["datecreated"])); ?></td>
                </tr>
                <?php
@@ -55,10 +56,10 @@
          </tbody>
          <thead>
                 <tr>
-                    <th>Number</th>
-                    <th>sender_name</th>
-                    <th>sender_username</th>
-                    <th>date updated</th>
+                    <th colspan="2">Sender Name</th>
+                    <th>Sender Email</th>
+                    <th>Subject line</th>
+                    <th>Time</th>
                 </tr>
                 </thead>   
                 

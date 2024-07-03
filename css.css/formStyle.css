@@ -5,7 +5,7 @@ input[type=text],[type=email]{
     border-radius: 3px;
     border: 1px solid #101010;
 }
-input[type=button]{
+input[type=submit]{
     width: 40%;
     padding: 12px,16px;
     font-size: 0.9em;
