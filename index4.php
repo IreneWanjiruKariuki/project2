@@ -24,10 +24,27 @@
             </ul>
             <h5>Contact Form</h5>
             <p>Prefer to send us a message directly? Fill out the form below and we will get back to you as soon as possible.</p>
+
+            <form action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="contacts_form label">
+                <label for="fn">Fullname:</label><br>
+                <input type="text" id="fn"
+                placeholder="Fullname" name="fullname" required><br><br>
+
+                <label for="em">Email:</label><br>
+                <input type="email" id="em"
+                placeholder="Email" name="email" required><br><br>
+
+                <label for="msg">Message:</label><br>
+                <textarea id="msg" 
+                placeholder="Enter your message here" name="message" rows="4" cols="50">
+                </textarea><br><br>
+
+                <input type="button" name="send_message" value="Send Message">
+            </form>
         </div>
         <?php include_once ("templates/sidebar.php"); ?>
     </div>
-    <div class="footer" style="margin-block-start: 525px;">
+    <div class="footer" style="margin-block-start: 800px;">
         copywrite CONSTRUCTION CO 2024 &copy; All rights reserved
     </div>
 

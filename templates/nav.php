@@ -16,18 +16,18 @@
                             <a class="nav-link active" aria-current="page" href="index2.php">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index4.php">Contact Us</a>
+                            <a class="nav-link active" aria-current="page" href="index6.php">Products and services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index5.php">Partnerships</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index6.php">Products and services</a>
+                            <a class="nav-link active" aria-current="page" href="index4.php">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="view_messages.php">View Messages</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" >
                             <a class="nav-link active" aria-current="page" href="r.php">Sign in</a>
                         </li>
                         <li class="nav-item">
