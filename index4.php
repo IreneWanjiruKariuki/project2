@@ -23,7 +23,7 @@
         VALUES ('$fn', '$em', '$sl','$msg')";
     
         if ($conn->query($insert_message) === TRUE) {
-            header("Location: contacts.php");
+            header("Location: view_messages.php");
             exit();
         } else {
             echo "Error: " . $insert_message . "<br>" . $conn->error;
