@@ -8,8 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body background="image/pexels-hngstrm-1939485.jpg" style="background-color:beige; ">
-<?php include_once ("templates/nav.php"); ?>
-<?php include_once ("templates/header.php"); ?>
+    <?php 
+    include_once ("templates/nav.php");
+    include_once ("templates/header.php");
+    if(isset($_POST["save_details"])){
+
+        $fn= $_POST["fullname"];
+        $un= $_POST["username"];
+        $pwd= $_POST["password"];
+    
+        $insert_message = "INSERT INTO messages (sender_name, sender_username, sender_password)
+        VALUES ('$fn', '$un', '$pwd')";
+    
+        if ($conn->query($insert_message) === TRUE) {
+            header("Location: contacts.php");
+            exit();
+        } else {
+            echo "Error: " . $insert_message . "<br>" . $conn->error;
+        }
+    }
+    ?>
+
+
     <div class="row:after">
         <div class="content"> 
             <h3>Contact Us</h3>
