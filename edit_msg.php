@@ -12,21 +12,27 @@
     require_once ("includes/db_connect.php"); 
     include_once ("templates/nav.php");
     include_once ("templates/header.php");
-    if(isset($_POST["send_message"])){
+
+    $messageId=$_GET["messageId"];
+    $spot_msg = "SELECT * FROM `messages` WHERE messageId = '$messageId' LIMIT 1";
+    $spot_msg_res = $conn->query($spot_msg);
+    $spot_msg_row = $spot_msg_res->fetch_assoc();
+
+    if(isset($_POST["update_message"])){
 
         $fn= mysqli_real_escape_string($conn,$_POST["fullname"]);
         $em= mysqli_real_escape_string($conn,$_POST["email"]);
         $sl= mysqli_real_escape_string($conn,$_POST["Subject_Line"]);
         $msg= mysqli_real_escape_string($conn,$_POST["message"]);
+        $messageId= mysqli_real_escape_string($conn,$_POST["MessageId"]);
+
+        $update_message = "UPDATE messages SET sender_name='$fn', sender_email='$em', subject_line='$sl',text_message='$msg' WHERE messageId='$messageId' LIMIT 1";
     
-        $insert_message = "INSERT INTO messages (sender_name, sender_email,subject_line, text_message)
-        VALUES ('$fn', '$em', '$sl','$msg')";
-    
-        if ($conn->query($insert_message) === TRUE) {
+        if ($conn->query($update_message) === TRUE) {
             header("Location: view_messages.php");
             exit();
         } else {
-            echo "Error: " . $insert_message . "<br>" . $conn->error;
+            echo "Error: " . $update_message . "<br>" . $conn->error;
         }
     }
     ?>
@@ -34,7 +40,7 @@
 
     <div class="row:after">
         <div class="content"> 
-            <h3>Contact Us</h3>
+            <h3>Update message</h3>
             <p>We'd love to hear from you! Whether you have questions, feedback, or need support, feel free to reach out to us through any of the following ways:</p>
             <h5>Customer Support</h5>
             <ul >
@@ -50,15 +56,15 @@
             <form action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="contacts_form label">
                 <label for="fn">Fullname:</label><br>
                 <input type="text" id="fn"
-                placeholder="Fullname" name="fullname" required><br><br>
+                placeholder="Fullname" name="fullname" required value="<?php print $spot_msg_row["sender_name"];?>"><br><br>
 
                 <label for="em">Email:</label><br>
                 <input type="email" id="em"
-                placeholder="Email" name="email" required><br><br>
+                placeholder="Email" name="email" required value="<?php print $spot_msg_row["sender_email"];?>"><br><br>
 
                 <label for="sl">Subject:</label> <br>
                 <select name="Subject_Line" id="sl">
-                <option value="subject line">--Select Subject--</option>
+                <option value="<?php print $spot_msg_row["sender_name"];?>"><?php print $spot_msg_row["subject_line"];?></option>
                     <option value="repairs">Repairs</option>
                     <option value="foundation">Foundation</option>
                     <option value="wiring">Wiring</option>
@@ -67,10 +73,11 @@
 
                 <label for="msg">Message:</label><br>
                 <textarea id="msg" 
-                placeholder="Enter your message here" name="message" rows="4" cols="50">
+                placeholder="Enter your message here" name="message" rows="4" cols="50" required><?php print $spot_msg_row["text_message"];?>"
                 </textarea><br><br>
 
-                <input type="submit" name="send_message" value="Send Message">
+                <input type="submit" name="update_message" value="Update Message">
+                <input type="hidden" name="MessageId" value="<?php print $spot_msg_row["messageId"];?>">
             </form>
         </div>
         <?php include_once ("templates/sidebar.php"); ?>
