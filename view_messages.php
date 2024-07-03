@@ -24,6 +24,7 @@
                     <th>Sender Email</th>
                     <th>Subject line</th>
                     <th>Time</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -46,6 +47,7 @@
                 <td><?php print $sel_msg_row["sender_email"]; ?></td>
                 <td><?php print "<strong>". $sel_msg_row["subject_line"] . '</strong> -' . substr($sel_msg_row["text_message"],0,20) . '...'; ?></td>
                 <td><?php print date("d-M-Y H:i", strtotime( $sel_msg_row["datecreated"])); ?></td>
+                <td> [ <a href="edit_mgs.php">Edit</a>] [Del]</td>
                </tr>
                <?php
               }
@@ -60,6 +62,7 @@
                     <th>Sender Email</th>
                     <th>Subject line</th>
                     <th>Time</th>
+                    <th>Action</th>
                 </tr>
                 </thead>   
                 
