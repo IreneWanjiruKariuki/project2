@@ -8,17 +8,8 @@
 </head>
 <body>
 
-    <div class="toplink a">
-        <a href="./">Home</a>
-        <a href="index2.html" >About</a>
-        <a href="index4.html" >Structure</a>
-        <a  href="index3.html">Terms</a>
-        <a href="index6.html">Products and services</a>
-        <div class="toplink-right">
-            <a href="r2.html">Sign in</a>
-            <a href="r.html">Sign up</a>
-        </div>
-    </div>
+    <?php include_once ("templates/nav.php"); ?>
+    
     <div class="header">
         <h1>PEKAR INDUSTRIAL LTD</h1> 
     </div>
