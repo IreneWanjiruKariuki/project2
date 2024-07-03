@@ -16,7 +16,7 @@
                             <a class="nav-link active" aria-current="page" href="index2.php">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index4.php">Structure</a>
+                            <a class="nav-link active" aria-current="page" href="index4.php">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index5.php">Partnerships</a>

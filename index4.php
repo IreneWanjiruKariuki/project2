@@ -12,18 +12,18 @@
 <?php include_once ("templates/header.php"); ?>
     <div class="row:after">
         <div class="content"> 
-            <h3>Structure of peace construction limited</h3>
-            <p>The structural organization of Peace Construction Company likely follows a hierarchical model common in construction<br>
-               firms. Here's a generalized structure:</p>
-            <ol type="a" start="1">
-                <li>Board of Directors/Owners: At the top level, there may be a board of directors or owners who provide strategic<br>
-                    direction and oversee major decisions.</li><br>
-                <li>Executive Management Team: This team comprises top-level executives responsible for implementing the company's vision,<br>
-                    strategies, and policies. </li><br>
-                <li>Departments or Divisions: The company may be divided into various departments or divisions based on functions.</li></li><br>
-                <li>Project Teams: Within each department, there are project teams responsible for specific construction projects.</li><br>
-                <li>Support Staff: Additionally, there may be support staff such as administrative assistants, IT specialists, and legal advisors who assist various departments in their functions.</li>
-            </ol>
+            <h3>Contact Us</h3>
+            <p>We'd love to hear from you! Whether you have questions, feedback, or need support, feel free to reach out to us through any of the following ways:</p>
+            <h5>Customer Support</h5>
+            <ul >
+               
+                <li>Email : pekar.industrial@gmail.com </li><br>
+                <li>Phone : 0722301274</li><br>
+                <li>Hours : Monday-Friday, 9AM-5PM</li><br>
+                
+            </ul>
+            <h5>Contact Form</h5>
+            <p>Prefer to send us a message directly? Fill out the form below and we will get back to you as soon as possible.</p>
         </div>
         <?php include_once ("templates/sidebar.php"); ?>
     </div>
