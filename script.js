@@ -11,7 +11,7 @@ function DynamicTimer(){
     document.getElementById('dtmer').innerHTML=h + ":"+m+":"+s;
     t=setTimeout('DynamicTimer()', 500);
 }
-function addZero(){
+function addZero(z){
     if(z<10){
         z="0" + z; 
     }

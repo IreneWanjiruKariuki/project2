@@ -21,7 +21,26 @@
     <?php date_default_timezone_set("Africa/Nairobi"); ?>
 
     Static timer: <?php print date("H:i:s");?> <br>
-    Dynamic timer: <span id="dtmer"></span>
+    Dynamic timer: <span id="dtmer"></span> 
+    <br> <br>
+
+    <script>
+        document.write(5+3);
+    </script>
+
+    <br> <br>
+
+    <script>
+        console.log("Add information here");
+    </script>
+
+    <script>
+        //window.alert("Your database is ready");
+    </script>
+    <br> <br>
+    <br> <br>
+
+
     <script src="script.js"></script>
 </body>
 </html>
