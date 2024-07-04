@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="DynamicTimer();">
     <p id="groupa"></p>
     <script>
         document.getElementById('groupa').innerHTML="This is my first JS code";
@@ -20,7 +20,8 @@
 
     <?php date_default_timezone_set("Africa/Nairobi"); ?>
 
-    Static timer: <?php print date("H:i:s");?>
+    Static timer: <?php print date("H:i:s");?> <br>
+    Dynamic timer: <div id="dtmer"></div>
     <script src="script.js"></script>
 </body>
 </html>
