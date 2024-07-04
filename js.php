@@ -21,7 +21,7 @@
     <?php date_default_timezone_set("Africa/Nairobi"); ?>
 
     Static timer: <?php print date("H:i:s");?> <br>
-    Dynamic timer: <div id="dtmer"></div>
+    Dynamic timer: <span id="dtmer"></span>
     <script src="script.js"></script>
 </body>
 </html>
