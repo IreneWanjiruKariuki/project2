@@ -8,9 +8,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body background="image/pexels-hngstrm-1939485.jpg" style="background-color:beige; ">
-<?php include_once ("templates/nav.php"); ?>
-<?php require_once("includes/db_connect.php"); ?>
-<?php include_once ("templates/header.php"); ?>
+<?php 
+include_once ("templates/nav.php");
+require_once("includes/db_connect.php");
+include_once ("templates/header.php");
+
+if(isset($_GET["DelId"])){
+    $DelId=$_GET["DelId "]; 
+
+    // sql to delete a record
+    $del_mes = "DELETE FROM messages WHERE messageId='$DelId' LIMIT 1";
+
+    if ($conn->query($del_mes) === TRUE) {
+        header("Location:view_messages.php");
+        exit();
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+}
+?>
 
     <div class="row:after">
 
@@ -47,7 +63,7 @@
                 <td><?php print $sel_msg_row["sender_email"]; ?></td>
                 <td><?php print "<strong>". $sel_msg_row["subject_line"] . '</strong> -' . substr($sel_msg_row["text_message"],0,20) . '...'; ?></td>
                 <td><?php print date("d-M-Y H:i", strtotime( $sel_msg_row["datecreated"])); ?></td>
-                <td> [ <a href="edit_msg.php?messageId=<?php print $sel_msg_row["messageId"]; ?>">Edit</a>] [Del]</td>
+                <td> [ <a href="edit_msg.php?messageId=<?php print $sel_msg_row["messageId"]; ?>">Edit</a>] [<a href="?DelId=<?php print $sel_msg_row["messageId"]; ?>">Del]</td>
                </tr>
                <?php
               }
