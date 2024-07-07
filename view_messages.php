@@ -14,7 +14,7 @@ require_once("includes/db_connect.php");
 include_once ("templates/header.php");
 
 if(isset($_GET["DelId"])){
-    $DelId=$_GET["DelId "]; 
+    $DelId=$_GET["DelId"]; 
 
     // sql to delete a record
     $del_mes = "DELETE FROM messages WHERE messageId='$DelId' LIMIT 1";
@@ -63,7 +63,7 @@ if(isset($_GET["DelId"])){
                 <td><?php print $sel_msg_row["sender_email"]; ?></td>
                 <td><?php print "<strong>". $sel_msg_row["subject_line"] . '</strong> -' . substr($sel_msg_row["text_message"],0,20) . '...'; ?></td>
                 <td><?php print date("d-M-Y H:i", strtotime( $sel_msg_row["datecreated"])); ?></td>
-                <td> [ <a href="edit_msg.php?messageId=<?php print $sel_msg_row["messageId"]; ?>">Edit</a>] [<a href="?DelId=<?php print $sel_msg_row["messageId"]; ?>">Del]</td>
+                <td> [ <a href="edit_msg.php?messageId=<?php print $sel_msg_row["messageId"]; ?>">Edit</a>] [<a href="?DelId=<?php print $sel_msg_row["messageId"]; ?>" onclick="return confirm('This action will delete this message permanently. \n Are you sure you want to proceed?');">Del]</td>
                </tr>
                <?php
               }
@@ -88,7 +88,7 @@ if(isset($_GET["DelId"])){
         <?php include_once ("templates/sidebar.php"); ?>
     </div>
     <div class="footer" style="margin-block-start: 550px;">
-        copywrite CONSTRUCTION CO <?php print date("Y"); ?>  &copy; All rights reserved
+        copyright CONSTRUCTION CO <?php print date("Y"); ?>  &copy; All rights reserved
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 

@@ -34,11 +34,27 @@
         console.log("Add information here");
     </script>
 
+    <br> <br>
+
     <script>
         //window.alert("Your database is ready");
     </script>
     <br> <br>
+
     <br> <br>
+
+    <a href=""onclick="return confirm('Are you sure?');">Delete</a>
+    <br> <br>
+    <br> <br>
+    <button type="button" onclick="window.print();">Print Page</button>
+    <br> <br>
+
+    <script>
+        let streetname = prompt ('What is your street namme?');
+        var firstname="Alex";
+        const MyAge=40;
+        document.write(firstname + " A.K.A " + streetname + " is " + MyAge + " years old ");
+    </script>
 
 
     <script src="script.js"></script>

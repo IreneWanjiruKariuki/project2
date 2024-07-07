@@ -58,7 +58,7 @@
 
                 <label for="sl">Subject:</label> <br>
                 <select name="Subject_Line" id="sl">
-                <option value="subject line">--Select Subject--</option>
+                <option value="">--Select Subject--</option>
                     <option value="repairs">Repairs</option>
                     <option value="foundation">Foundation</option>
                     <option value="wiring">Wiring</option>
