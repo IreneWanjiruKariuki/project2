@@ -1,6 +1,6 @@
 
     <div class="container">
-        <!-- nav starts here -->
+    <!-- nav starts here -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary" >
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">PEKAR</a>
@@ -27,14 +27,15 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="view_messages.php">View Messages</a>
                         </li>
-                        <li class="nav-item" >
-                            <a class="nav-link active" aria-current="page" href="r.php">Sign in</a>
+                    </ul>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="r2.php">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="r2.php">Sign up</a>
+                            <a class="nav-link active" aria-current="page" href="r.php">Sign up</a>
                         </li>
-                        
-                        
+  
                     </ul>
                 </div>
             </div>
