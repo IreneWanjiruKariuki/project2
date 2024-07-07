@@ -32,32 +32,36 @@ body{
 .toplink-right{
     float: right;
 }
-.row:after{
+.row{
     content:"";
     display: block;
     clear: both;
 }
+
+    .content{
+    
+        float: left;
+        width: 70%;
+        padding: 15px;
+    }
+    .sidebar{
+    
+        float: left;
+        width:30%;
+        padding: 15px;
+    }
+
 .footer{
-    background-color: dimgrey;
-    padding: 20px;
-    text-align: center;
-    color: rgb(233, 233, 233);
+    background-color: dimgrey !important;
+    padding: 20px !important;
+    text-align: center !important;
+    color: rgb(233, 233, 233) !important;
    
 
 }
 
-.content{
-    
-    float: left;
-    width: 70%;
-    padding: 15px;
-}
-.side_bar{
-    
-    float: left;
-    width:30%;
-    padding: 15px;
-}
+
+
 
 @media screen and (max-width: 700px)  {
     .content, .side_bar, img{

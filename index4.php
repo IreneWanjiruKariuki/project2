@@ -67,8 +67,7 @@
 
                 <label for="msg">Message:</label><br>
                 <textarea id="msg" 
-                placeholder="Enter your message here" name="message" rows="4" cols="50">
-                </textarea><br><br>
+                 name="message" rows="4" cols="50" >Enter your message here</textarea><br><br>
 
                 <input type="submit" name="send_message" value="Send Message">
             </form>

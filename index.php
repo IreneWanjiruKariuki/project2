@@ -16,7 +16,7 @@
     include_once ("templates/header.php"); 
     ?>
 
-    <div class="row:after">
+    <div class="row">
         <div class="content" >
             <h3> Welcome to Peace Construction Company</h3>
             <p>At Peace Construction Company, we believe in building not just structures, but relationships,communities, and a better future. With a dedication to excellence, integrity, and sustainability, we are your trusted partner in constructing dreams into reality.</p>
