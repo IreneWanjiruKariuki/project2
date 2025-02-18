@@ -32,7 +32,7 @@ body{
 .toplink-right{
     float: right;
 }
-.row{
+.row:after{
     content:"";
     display: block;
     clear: both;

@@ -9,15 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
 </head>
-<body background="image/pexels-hngstrm-1939485.jpg" style="background-color:beige; ">
+<body background="image/pexels-hngstrm-1939485.jpg">
     
     <?php 
     include_once ("templates/nav.php");
     include_once ("templates/header.php"); 
     ?>
 
-    <div class="row">
-        <div class="content" >
+
+    <div class="row:after">
+        
+    
+        <div class="content">
             <h3> Welcome to Peace Construction Company</h3>
             <p>At Peace Construction Company, we believe in building not just structures, but relationships,communities, and a better future. With a dedication to excellence, integrity, and sustainability, we are your trusted partner in constructing dreams into reality.</p>
             
@@ -29,7 +32,7 @@
     </div>
 
     <div class="footer">
-        copywrite CONSTRUCTION CO 2024 &copy; All rights reserved
+        copyright CONSTRUCTION CO 2024 &copy; All rights reserved
     </div>
     
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 

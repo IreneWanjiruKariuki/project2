@@ -87,7 +87,7 @@ if(isset($_GET["DelId"])){
 
         <?php include_once ("templates/sidebar.php"); ?>
     </div>
-    <div class="footer" style="margin-block-start: 550px;">
+    <div class="footer">
         copyright CONSTRUCTION CO <?php print date("Y"); ?>  &copy; All rights reserved
     </div>
 

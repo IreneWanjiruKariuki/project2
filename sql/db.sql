@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2024 at 02:43 AM
+-- Generation Time: Jul 07, 2024 at 07:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,82 +18,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `voge`
+-- Database: `project2`
 --
-DROP DATABASE IF EXISTS `voge`;
-CREATE DATABASE IF NOT EXISTS `voge` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `voge`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `genders`
+-- Table structure for table `messages`
 --
 
-DROP TABLE IF EXISTS `genders`;
-CREATE TABLE IF NOT EXISTS `genders` (
-  `genderId` tinyint(1) NOT NULL AUTO_INCREMENT,
-  `gender` varchar(30) DEFAULT NULL,
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE IF NOT EXISTS `messages` (
+  `messageId` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `sender_name` varchar(30) DEFAULT NULL,
+  `sender_email` varchar(50) DEFAULT NULL,
+  `subject_line` text DEFAULT NULL,
+  `text_message` text DEFAULT NULL,
   `datecreated` datetime DEFAULT current_timestamp(),
   `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`genderId`),
-  UNIQUE KEY `gender` (`gender`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`messageId`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `genders`
+-- Dumping data for table `messages`
 --
 
-INSERT INTO `genders` (`genderId`, `gender`, `datecreated`, `dateupdated`) VALUES
-(1, 'Male', '2024-06-20 03:38:47', '2024-06-20 03:38:47'),
-(2, 'Female', '2024-06-20 03:38:47', '2024-06-20 03:38:47'),
-(3, 'Rather not say', '2024-06-20 03:38:47', '2024-06-20 03:38:47');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `roles`
---
-
-DROP TABLE IF EXISTS `roles`;
-CREATE TABLE IF NOT EXISTS `roles` (
-  `roleId` tinyint(1) NOT NULL AUTO_INCREMENT,
-  `role` varchar(30) DEFAULT NULL,
-  `datecreated` datetime DEFAULT current_timestamp(),
-  `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`roleId`),
-  UNIQUE KEY `role` (`role`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `roles`
---
-
-INSERT INTO `roles` (`roleId`, `role`, `datecreated`, `dateupdated`) VALUES
-(1, 'Admin', '2024-06-20 03:37:05', '2024-06-20 03:37:05'),
-(2, 'Student', '2024-06-20 03:37:05', '2024-06-20 03:37:05');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `userId` bigint(10) NOT NULL AUTO_INCREMENT,
-  `fullname` varchar(50) DEFAULT NULL,
-  `email` varchar(50) NOT NULL DEFAULT '',
-  `username` varchar(50) NOT NULL DEFAULT '',
-  `password` varchar(60) DEFAULT NULL,
-  `roleId` tinyint(1) NOT NULL DEFAULT 0,
-  `genderId` tinyint(1) NOT NULL DEFAULT 0,
-  `datecreated` datetime DEFAULT current_timestamp(),
-  `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`userId`),
-  UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `messages` (`messageId`, `sender_name`, `sender_email`, `subject_line`, `text_message`, `datecreated`, `dateupdated`) VALUES
+(4, 'Irene Kariuki', 'kariukiirene434@gmail.com', 'subject line', 'i speak english and spanish                ', '2024-07-03 20:31:57', '2024-07-03 20:31:57'),
+(5, 'jane', 'jane434@gmail.com', 'repairs', 'i speak english and french              ', '2024-07-03 20:32:48', '2024-07-03 20:32:48'),
+(6, 'Charity', 'cherry@gmail.com', 'Cherry', ' I speak Kiswahili and english                \"\r\n                ', '2024-07-03 20:50:25', '2024-07-03 22:41:35'),
+(7, 'Faith', 'Faith@gmail.com', 'foundation', '   Prefer to send us a message directly? Fill ou             ', '2024-07-05 11:27:48', '2024-07-05 11:27:48');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

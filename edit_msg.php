@@ -13,8 +13,8 @@
     include_once ("templates/nav.php");
     include_once ("templates/header.php");
 
-    $messageId=$_GET["messageId"];
-    $spot_msg = "SELECT * FROM `messages` WHERE messageId = '$messageId' LIMIT 1";
+    $MessageId=$_GET["messageId"];
+    $spot_msg = "SELECT * FROM `messages` WHERE messageId = '$MessageId' LIMIT 1";
     $spot_msg_res = $conn->query($spot_msg);
     $spot_msg_row = $spot_msg_res->fetch_assoc();
 
@@ -24,9 +24,9 @@
         $em= mysqli_real_escape_string($conn,$_POST["email"]);
         $sl= mysqli_real_escape_string($conn,$_POST["Subject_Line"]);
         $msg= mysqli_real_escape_string($conn,$_POST["message"]);
-        $messageId= mysqli_real_escape_string($conn,$_POST["MessageId"]);
+        $MessageId= mysqli_real_escape_string($conn,$_POST["MessageId"]);
 
-        $update_message = "UPDATE messages SET sender_name='$fn', sender_email='$em', subject_line='$sl',text_message='$msg' WHERE messageId='$messageId' LIMIT 1";
+        $update_message = "UPDATE messages SET sender_name='$fn', sender_email='$em', subject_line='$sl',text_message='$msg' WHERE messageId='$MessageId' LIMIT 1";
     
         if ($conn->query($update_message) === TRUE) {
             header("Location: view_messages.php");

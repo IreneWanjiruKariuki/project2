@@ -34,7 +34,7 @@
         </div>
         <?php include_once ("templates/sidebar.php"); ?>
     </div>
-    <div class="footer" style="margin-block-start: 550px;">
+    <div class="footer">
         copywrite CONSTRUCTION CO 2024 &copy; All rights reserved
     </div>
 
